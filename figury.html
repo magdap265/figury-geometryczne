@@ -4,33 +4,73 @@
 
 <head>
    <meta charset="utf-8">
+   <title>Figury geometryczne</title>
    <script src="FiguryGeometryczne.js"></script>
-   <!-- <link href = "figury.css" rel = "stylesheet" tyle = "text/css" media="all"> -->
+   <link href = "figury.css" rel = "stylesheet" tyle = "text/css" media="all">
 </head>
 
 <body>
+
+    <header>
+        Figury geometryczne.
+    </header>
+
     <article id="trojkaty">
+        <section class="sekcjaFigury">
+            TRÓJKĄTY
+        </section>
+
         Podaj nazwę trójkąta:
         <input type="text" id="nazwaTrojkata"/> <br/> <br/>
         Podaj długość podstawy trójkąta:
         <input type="text" id="podstawa"/><br/><br/>
         Podaj długość wysokości trójkąta:
         <input type="text" id="wysokosc"/>
-        <input type="submit" id="dodaj" value="Dodaj" onclick = "dodajTrojkat()"/>
+        <input type="submit" class="dodajT" value="Dodaj" onclick = "dodajTrojkat()"/>
         
         <!-- <section id="sekcjaTrojkaty">
             Poczatek sekcji
         </section> -->
-        
-        <table id="tabelaNaTrojkaty">
+        <div>
+
+            <table id="tabelaNaTrojkaty">
             <tr>
-                <td>Nazwa trójkąta  |</td>  <td>Ilość boków  |</td> <td>Podstawa  |</td> <td>Wysokość  |</td> <td>Wzór na pole  |</td> <td>Pole trójkąta</td>
+                <td>Nazwa trójkąta</td>  <td>Ilość boków</td> <td>Podstawa</td> <td>Wysokość</td> <td>Wzór na pole</td> <td>Pole trójkąta</td>
             </tr>
-            <!-- <tr>
-                <td id="nazwaT"></td>   <td id="ilBokowT"></td>   <td id="podstawaT"></td>   <td id="wysokoscT"></td>   <td id="wzorT"></td>   <td></td>
-            </tr> -->
-        </table>
+            </table>
+
+            <input type="button" value="Schowaj" id="schowajT" onclick="schowajPokazT()"/>
+        </div>
+
     </article>
+
+    <article id="prostokaty">
+            <section class="sekcjaFigury">
+                PROSTOKĄTY
+            </section>
+    
+            Podaj nazwę prostokąta:
+            <input type="text" id="nazwaProstokata"/> <br/> <br/>
+            Podaj długość pierwszego boku prostokąta:
+            <input type="text" id="bok1"/><br/><br/>
+            Podaj długość drugiego boku prostokąta:
+            <input type="text" id="bok2"/>
+            <input type="submit" id="dodajP" value="Dodaj" onclick = "dodajProstokat()"/>
+            
+
+            <div>
+    
+                <table id="tabelaNaProstokaty">
+                <tr>
+                    <td>Nazwa prostokąta</td>  <td>Ilość boków</td> <td>Pierwszy bok</td> <td>Drugi bok</td> <td>Wzór na pole</td> <td>Pole prostokąta</td>
+                </tr>
+                </table>
+    
+                <input type="button" value="Schowaj" id="schowajP" onclick="schowajPokazP()"/>
+            </div>
+    
+        </article>
+    
 
 
     <!-- <input type="text" id="nazwaProstokata"/>

@@ -109,11 +109,17 @@ function dodajTrojkat(){
 
     let nowyWiersz = tabelaNaTrojkaty.insertRow(-1);
     let nazwaT = nowyWiersz.insertCell(0);
+    nazwaT.classList.add("nowyWiersz");
     let iloscBokowT = nowyWiersz.insertCell(1);
+    iloscBokowT.classList.add("nowyWiersz");
     let podstawaT = nowyWiersz.insertCell(2);
+    podstawaT.classList.add("nowyWiersz");
     let wysokoscT = nowyWiersz.insertCell(3);
+    wysokoscT.classList.add("nowyWiersz");
     let wzorNaPoleT = nowyWiersz.insertCell(4);
+    wzorNaPoleT.classList.add("nowyWiersz");
     let poleT = nowyWiersz.insertCell(5);
+    poleT.classList.add("nowyWiersz");
 
     // wypełnianie tabeli
     nazwaT.innerHTML = wlasnosciTrojkata.nazwaFigury;
@@ -121,7 +127,7 @@ function dodajTrojkat(){
     podstawaT.innerHTML = wlasnosciTrojkata.podstawa;
     wysokoscT.innerHTML = wlasnosciTrojkata.wysokosc;
     wzorNaPoleT.innerHTML = wlasnosciTrojkata.wzorNaPole;
-    poleT. innerHTML = wlasnosciTrojkata.pole;
+    poleT.innerHTML = wlasnosciTrojkata.pole;
         
 
 
@@ -136,4 +142,74 @@ function dodajTrojkat(){
 
     
     
+}
+
+function schowajPokazT (){
+    const pustaTabela = document.getElementById("tabelaNaTrojkaty");
+
+    if (pustaTabela.style.display == "none") {
+        pustaTabela.style.display = "inline-block";
+        document.getElementById("schowajT").value = "Schowaj";
+
+    } else {
+        pustaTabela.style.display = "none";
+        document.getElementById("schowajT").value = "Pokaż";
+    }
+}
+
+
+
+
+// funkcja pobierająca dane z przeglądarki i tworząda z nich w tabeli bazę prostokątów
+
+function dodajProstokat(){
+    let nazwaProstokata = document.getElementById("nazwaProstokata").value;
+    let bok1Prostokata = document.getElementById("bok1").value;
+    let bok2Porstokata = document.getElementById("bok2").value;
+
+    let nowyProstokat = new Prostokat (nazwaProstokata, 4, bok1Prostokata, bok2Porstokata);
+    
+    let wlasnosciProstokata = nowyProstokat.WyswietlWlasnosci();
+    
+
+    // tworzenie tabeli na prostokąty
+   
+    let tabelaNaProstokaty = document.getElementById("tabelaNaProstokaty"); 
+
+    let nowyWiersz = tabelaNaProstokaty.insertRow(-1);
+    let nazwaP = nowyWiersz.insertCell(0);
+    nazwaP.classList.add("nowyWiersz");
+    let iloscBokowP = nowyWiersz.insertCell(1);
+    iloscBokowP.classList.add("nowyWiersz");
+    let bok1P = nowyWiersz.insertCell(2);
+    bok1P.classList.add("nowyWiersz");
+    let bok2P = nowyWiersz.insertCell(3);
+    bok2P.classList.add("nowyWiersz");
+    let wzorNaPoleP = nowyWiersz.insertCell(4);
+    wzorNaPoleP.classList.add("nowyWiersz");
+    let poleP = nowyWiersz.insertCell(5);
+    poleP.classList.add("nowyWiersz");
+
+    // wypełnianie tabeli
+    nazwaT.innerHTML = wlasnosciProstokata.nazwaFigury;
+    iloscBokowT.innerHTML = wlasnosciProstokata.iloscBokow;
+    bok1T.innerHTML = wlasnosciProstokata.bok1;
+    bok2T.innerHTML = wlasnosciProstokata.bok2;
+    wzorNaPoleT.innerHTML = wlasnosciProstokata.wzorNaPole;
+    poleT.innerHTML = wlasnosciProstokata.pole;
+         
+}
+
+
+function schowajPokazP (){
+    const pustaTabela = document.getElementById("tabelaNaProstokty");
+
+    if (pustaTabela.style.display == "none") {
+        pustaTabela.style.display = "inline-block";
+        document.getElementById("schowajP").value = "Schowaj";
+
+    } else {
+        pustaTabela.style.display = "none";
+        document.getElementById("schowajP").value = "Pokaż";
+    }
 }

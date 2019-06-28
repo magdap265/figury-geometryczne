@@ -1,0 +1,110 @@
+body{
+    background-image: url(img/tlo.jpg);
+    text-align:  center;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+header{
+    text-align:  center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    width: 1000px;
+    border: 3px solid;
+    border-radius: 50px;
+    background-color: teal;
+    padding: 30xp;
+    color: azure;
+
+}
+
+input{
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.sekcjaFigury{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#trojkaty{
+    width: 1000px;
+    margin-top: 30px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: teal;
+    background:
+        linear-gradient(to left bottom,
+        transparent 50%, rgba(150,150,150,.4) 0)
+        no-repeat 100% 0 / 5em 5em,
+        linear-gradient(-135deg, transparent 3.5em, rgb(255, 255, 255, 0.7) 0);
+}
+
+#tabelaNaTrojkaty{
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-spacing: 0px;
+    display: inline-block;
+}
+
+#prostokaty{
+    width: 1000px;
+    margin-top: 30px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    /* background-color: rgb(255, 255, 255, 0.7); */
+    color: teal;
+    background:
+        linear-gradient(to left bottom,
+        transparent 50%, rgba(150,150,150,.4) 0)
+        no-repeat 100% 0 / 5em 5em,
+        linear-gradient(-135deg, transparent 3.5em, rgb(255, 255, 255, 0.7) 0);
+}
+#tabelaNaProstokaty{
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-spacing: 0px;
+    display: inline-block;
+}
+
+td{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+}
+
+td:first-child{
+    border-left: 1px solid black;
+}
+
+.nowyWiersz{
+    border-top: 0;
+} 
+
+#schowajT{
+
+    margin-left: 20px;
+    position: absolute;
+    display: inline-block; 
+}
+
+#schowajP{
+
+    margin-left: 20px;
+    position: absolute;
+    display: inline-block; 
+}
